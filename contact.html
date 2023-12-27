@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kan Bağışla</title>
+
+  <!-- favicon-->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!--css-->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  
+  <!-- google font link-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* Popup styles */
+    .popup {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background: linear-gradient(135deg, #ffffff, #a3d2ee);
+      color: #0e254e;
+      font-size: 16px;
+      z-index: 9999;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    @media screen and (max-width: 768px) {
+    .hero-form {
+        display: flex;
+        flex-direction: column;
+      }
+      .email-field {
+        margin-bottom: 10px;
+      }
+      .hero-banner iframe {
+        width: 100%;
+        height: 200px;
+      }
+    }
+    @media screen and (max-width: 900px) {
+      .hero-form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .email-field {
+        margin-bottom: 10px;
+      }
+
+      .hero-banner iframe {
+        width: 100%;
+        height: 250px;
+      }
+    }
+    /* Media query for screen sizes between 905x800 and 1197x800 */
+    @media screen and (min-width: 905px) and (max-width: 1197px) {
+      .hero-form {
+        max-width: 70%;
+        margin: 0 auto;
+      }
+      .hero-banner iframe {
+        width: 100%;
+        height: 300px;
+      }
+    }
+
+  </style>
+
+  <script>
+    // Function to display the popup message
+    function showPopup(message) {
+      const popup = document.createElement("div");
+      popup.className = "popup";
+      popup.textContent = message;
+      document.body.appendChild(popup);
+      // Automatically close the popup after 3 seconds
+      setTimeout(function () {
+        popup.remove();
+      }, 3000);
+    }
+  </script>
+
+</head>
+
+<body id="top">
+  <!-- HEADER-->
+  <header class="header">
+    <div class="header-top">
+      <div class="container">
+        
+        <ul class="social-list">
+          <li>
+            <a href="" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="header-bottom" data-header>
+      <div class="container">
+        <a href="#" class="logo">Kan Bağışla</a>
+        <nav class="navbar container" data-navbar>
+            <ul class="navbar-list">
+                <li>
+                  <a href="index.html" class="navbar-link" data-nav-link>Ana sayfa</a>
+                </li>
+                <li>
+                  <a href="canyoudonate.html" class="navbar-link" data-nav-link>Donör bulun</a>
+                </li>
+                <li>
+                  <a href="index.html" class="navbar-link" data-nav-link>Bilgi Alınız</a>
+                </li>
+                <li>
+                  <a href="index.html" class="navbar-link" data-nav-link>Blog</a>
+                </li>
+                <li>
+                  <a href="contact.html" class="navbar-link" data-nav-link>İletişim</a>
+                </li>
+              </ul>
+        </nav>
+        <a href="" class="btn">Giriş / Kayıt</a>
+        <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+          <ion-icon name="menu-sharp" aria-hidden="true" class="menu-icon"></ion-icon>
+          <ion-icon name="close-sharp" aria-hidden="true" class="close-icon"></ion-icon>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <!--HERO-->
+    <section class="section hero" id="home" style="background-image: url('./assets/images/hero-bg.png')"
+        aria-label="hero">
+        <div class="container">
+          <div class="hero-content">
+            <img src="assets/images/blood-icon.png" alt="ICON" width="70" height="70"> 
+            <p class="section-subtitle">Kan Bağışı</p>
+            <h1 class="h1 hero-title">Bize Ulaşım</h1>
+            <h2 style="color: var(--royal-blue-light);">Adres</h2>
+            <p class="hero-text">
+                Bucak Teknoloji Fakültesi Dekanlığı
+                Camii, Türkerler Cd. 301. Sokak, 15300 Bucak/Burdur
+            </p>
+            <h2 style="color: var(--royal-blue-light);">İletişim Bilgileri</h2>
+            <p class="hero-text">
+            MOBILE: +905510729429 | TELEPHONE:+905353991149<br>
+            EMAIL : mak@edu.tr<br>
+            </p>
+            <form action="" class="hero-form" method="POST">
+              <input type="email" name="email_address" aria-label="email" placeholder="Lütfen email adresinizi giriniz" required
+                class="email-field">
+              <button type="submit" class="btn">Gönder</button>
+            </form>
+          </div>
+          <figure class="hero-banner">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3166.934519844425!2d30.602068311416215!3d37.4622679299838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c4415112e55691%3A0xcc46e83f89649bfb!2zQnVjYWsgVGVrbm9sb2ppIEZha8O8bHRlc2kgRGVrYW5sxLHEn8Sx!5e0!3m2!1str!2str!4v1703677161712!5m2!1str!2str" width="700" height="600" style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </figure>
+        </div>
+    </section>
+
+  <!--FOOTER-->
+  <footer class="footer">
+    <div class="footer-top section">
+      <div class="container">
+        <div class="footer-brand">
+          <a href="#" class="logo">Kan Bağışı</a>
+          <p class="footer-text">
+            Kan bağışçılarını alıcılarla buluşturma ve sağlık sektöründeki boşluğu doldurma konusunda tutkuluyuz. 
+            Kendini fark yaratmaya adamış bireyler arasında empati, destek ve dayanışmayı teşvik eden bir topluluk oluşturmaya çalışıyoruz.
+          </p>
+          <div class="schedule">
+            <div class="schedule-icon">
+              <ion-icon name="time-outline"></ion-icon>
+            </div>
+            <span class="span">
+              24 saat <br>
+              365 gün
+             
+            </span>
+          </div>
+        </div>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Diğer linker</p>
+          </li>
+          <li>
+            <a href="index.html" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Anasayfa</span>
+            </a>
+          </li>
+          <li>
+            <a href="canyoudonate.html" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Donör bulun</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Bilgi Alınız</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Blog</span>
+            </a>
+          </li>
+          <li>
+            <a href="contact.html" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">İletişim</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">Giriş / Kayıt</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">diğer İletişim</p>
+          </li>
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">xxxxxxxxx</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">xxxxxxxxx</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">xxxxxxxxx</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">xxxxxxxxx</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">xxxxxxxxx</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+              <span class="span">xxxxxxxxx</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Bize Ulaşın</p>
+          </li>
+          <li class="footer-item">
+            <div class="item-icon">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <a href="https://www.google.com.tr/maps/place/Bucak+Teknoloji+Fak%C3%BCltesi+Dekanl%C4%B1%C4%9F%C4%B1/@37.4622637,30.6020737,17z/data=!3m1!4b1!4m6!3m5!1s0x14c4415112e55691:0xcc46e83f89649bfb!8m2!3d37.4622637!4d30.6046486!16s%2Fg%2F11cp7jf1q5?entry=ttu">
+            <address class="item-text">
+              Bucak Teknoloji Fakültesi <br>
+               Dekanlığı Camii,
+            </address>
+          </a>
+          </li>
+          <li class="footer-item">
+            <div class="item-icon">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+            <a href="tel:+917052101786" class="footer-link">+905510729429</a>
+          </li>
+          <li class="footer-item">
+            <div class="item-icon">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <a href="mailto:help@example.com" class="footer-link">maku@edu.tr</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          
+        </p>
+        <ul class="social-list">
+          <li>
+            <a href="" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!--BACK TO TOP-->
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="caret-up" aria-hidden="true"></ion-icon>
+  </a>
+
+  <!--custom js link-->
+  <script src="./assets/js/script.js" defer></script>
+  <!--ionicon link-->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

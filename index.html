@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kan-Bağışla</title>
+
+  <!-- favicon-->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!--css-->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  
+
+  <!-- google font link-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+  .popup {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background: linear-gradient(135deg, #ffffff, #a3d2ee);
+      color: #0e254e;
+      font-size: 16px;
+      z-index: 9999;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    </style>
+  <script>
+    // Function to display the popup message
+    function showPopup(message) {
+      const popup = document.createElement("div");
+      popup.className = "popup";
+      popup.textContent = message;
+      document.body.appendChild(popup);
+
+      // Automatically close the popup after 3 seconds
+      setTimeout(function () {
+        popup.remove();
+      }, 3000);
+    }
+  </script>
+</head>
+
+<body id="top">
+  <!-- HEADER-->
+  <header class="header">
+    <div class="header-top">
+      <div class="container">
+        
+        <ul class="social-list">
+          <li>
+            <a href="https://www.facebook.com/andro.pool.54?mibextid=ZbWKwL" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/_vladimir_putin.___/" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/Annabel07785340" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://youtu.be/Af0gk_kiGac" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="header-bottom" data-header>
+      <div class="container">
+        <a href="#" class="logo">Kan Bağışla</a>
+        <nav class="navbar container" data-navbar>
+          <ul class="navbar-list">
+            <li>
+              <a href="#" class="navbar-link" data-nav-link>Ana sayfa</a>
+            </li>
+            <li>
+              <a href="#service" class="navbar-link" data-nav-link>Donör bulun</a>
+            </li>
+            <li>
+              <a href="#about" class="navbar-link" data-nav-link>Bilgi Alınız</a>
+            </li>
+            <li>
+              <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+            </li>
+            <li>
+              <a href="contact.html" class="navbar-link" data-nav-link>İletişim</a>
+            </li>
+          </ul>
+        </nav>
+        <a href="" class="btn">Giriş / Kayıt</a>
+        <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+          <ion-icon name="menu-sharp" aria-hidden="true" class="menu-icon"></ion-icon>
+          <ion-icon name="close-sharp" aria-hidden="true" class="close-icon"></ion-icon>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <!--HERO-->
+      <section class="section hero" id="home" style="background-image: url('./assets/images/hero-bg.png')"
+        aria-label="hero">
+        <div class="container">
+          <div class="hero-content">
+            
+           
+            <img src="assets/images/blood-icon.png" alt="ICON" width="75" height="75"> 
+            <h1 class="h1 hero-title">Kan bağışçılarıyla bağlan....</h1>
+            <p class="hero-text">
+              Amacımız, kan bağışçıları ile alıcıları bir araya getirerek, her iki taraf için sorunsuz ve etkili bir deneyim sunmaktır. Bize güvenebilirsiniz, en iyi hizmeti sunuyoruz...
+            </p>
+            <form action="" class="hero-form" method="POST">
+              <input type="email" name="email_address" aria-label="email" placeholder="Mail adresin....." required
+                class="email-field">
+              <button type="submit" class="btn">Gönder</button>
+            </form>
+          </div>
+          <figure class="hero-banner">
+            <img src="./assets/images/hero-banner.png" width="400" height="750" alt="hero banner" class="w-100">
+          </figure>
+        </div>
+      </section>
+
+      <!--SERVICE-->
+<section class="section service" id="service" aria-label="service">
+  <div class="container">
+    <p class="section-subtitle text-center">Kendin için en iyi donörü bul</p>
+    <h2 class="h2 section-title text-center">DONÖR BUL</h2>
+
+    <!-- Replace the existing content with your form -->
+    <form class="donor-form">
+      <div class="form-group">
+        <label for="name">Ad:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Telefon:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="blood-type">Kan Tipi:</label>
+        <select id="blood-type" name="blood-type">
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="city">Şehir:</label>
+        <input type="text" id="city" name="city" required>
+      </div>
+
+      <div class="form-group">
+        <label for="state">İl:</label>
+        <input type="text" id="state" name="state" required>
+      </div>
+
+      <button type="submit" class="btn">Donör bul</button>
+    </form>
+  </div>
+</section>
+
+
+
+      <!--ABOUT-->
+      <section class="section about" id="about" aria-label="about">
+        <div class="container">
+          <figure class="about-banner">
+            <img src="./assets/images/about-banner.png" width="470" height="538" loading="lazy" alt="about banner"
+              class="w-100">
+          </figure>
+          <div class="about-content">
+            <p class="section-subtitle">Hakkımızda</p>
+            <h2 class="h2 section-title">Sizin sevenlerle ilgileniyoruz ꨄ︎</h2>
+            <p class="section-text section-text-1">
+              Red Stream olarak, kan bağışçılarını alıcılarla buluşturma ve sağlık sektöründeki boşluğu kapatma konusunda tutkulu bir şekilde çalışıyoruz. Misyonumuz, hem bağışçılar hem de alıcılar için sorunsuz ve etkili bir deneyim sağlamak, yaşam kurtaran kan transfüzyonlarına zamanında erişimi garanti etmektir
+            </p>
+            <p class="section-text">
+              Empati, destek ve fark yaratmaya kararlı bireyler arasında duyarlılık ve dayanışmayı teşvik eden bir topluluk oluşturmak için çaba harcıyoruz. Potansiyel bir bağışçı olun ya da kan ihtiyacı olan biri olun, her adımda yanınızda olmak için buradayız.
+            </p>
+            <a href="about.html" class="btn">Bizim hakkımızda daha fazla şey okuyun</a>
+          </div>
+        </div>
+      </section>
+
+      <!--services-->
+
+      <section class="section doctor" aria-label="doctor">
+        <div class="container">
+          <p class="section-subtitle text-center">Alarm !</p>
+          <h2 class="h2 section-title text-center">Diğer servislerimiz</h2>
+          <ul class="has-scrollbar">
+            <li class="scrollbar-item">
+              <div class="doctor-card">
+                <div class="card-banner img-holder" style="--width: 460; --height: 500;">
+                  <img src="./assets/images/doctor-1.png" width="460" height="500" loading="lazy" alt="PREBOOK"
+                    class="img-cover">
+                </div>
+                <h3 class="h3">
+                  <a href="#" class="card-title">Önceden kan alın</a>
+                </h3>
+                <p class="card-subtitle">Yaklaşan günler için kan bağışı</p>
+                <ul class="card-social-list">
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="scrollbar-item">
+              <div class="doctor-card">
+                <div class="card-banner img-holder" style="--width: 460; --height: 500;">
+                  <img src="./assets/images/doctor-2.png" width="460" height="500" loading="lazy" alt="AMBULANCE"
+                    class="img-cover">
+                </div>
+                <h3 class="h3">
+                  <a href="#" class="card-title">Ambulansı ara</a>
+                </h3>
+                <p class="card-subtitle">Bizim ambulansımızı arayın</p>
+                <ul class="card-social-list">
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="scrollbar-item">
+              <div class="doctor-card">
+
+                <div class="card-banner img-holder" style="--width: 460; --height: 500;">
+                  <img src="./assets/images/doctor-3.png" width="460" height="500" loading="lazy" alt="WHY DONATE ?"
+                    class="img-cover">
+                </div>
+                <h3 class="h3">
+                  <a href="#" class="card-title">Neden bağışlamalıyım ?</a>
+                </h3>
+                <p class="card-subtitle">Neden kan bağışlarız ?</p>
+                <ul class="card-social-list">
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="scrollbar-item">
+              <div class="doctor-card">
+                <div class="card-banner img-holder" style="--width: 460; --height: 500;">
+                  <img src="./assets/images/doctor-4.png" width="460" height="500" loading="lazy" alt="CAN YOU DONATE"
+                    class="img-cover">
+                </div>
+                <h3 class="h3">
+                  <a href="canyoudonate.html" class="card-title">Bağışlar mısınız ?</a>
+                </h3>
+                <p class="card-subtitle">Tarih için kontrol edin</p>
+                <ul class="card-social-list">
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+
+      <!--CTA-->
+      <section class="section cta" aria-label="cta">
+        <div class="container">
+          <figure class="cta-banner">
+            <img src="./assets/images/cta-banner.png" width="1056" height="1076" loading="lazy" alt="cta banner"
+              class="w-100">
+          </figure>
+          <div class="cta-content">
+            <p class="section-subtitle">Kanınızı bize verin</p>
+            <h2 class="h2 section-title">Biz yeni kan bağışçılarına açığız</h2>
+            <a href="canyoudonate.html" class="btn">Bağışlama programı</a>
+          </div>
+        </div>
+      </section>
+
+      <!--BLOG-->
+      <section class="section blog" id="blog" aria-label="blog">
+        <div class="container">
+          <p class="section-subtitle text-center">Bloğumuz</p>
+          <h2 class="h2 section-title text-center">Son Bloglar & Haberler</h2>
+          <ul class="blog-list">
+            <li>
+              <div class="blog-card">
+                <figure class="card-banner img-holder" style="--width: 1180; --height: 800;">
+                  <img src="./assets/images/blog-1.jpg" width="1180" height="800" loading="lazy"
+                    alt="Cras accumsan nulla nec lacus ultricies placerat." class="img-cover">
+                  <div class="card-badge">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                    <time class="time" datetime="2022-03-24">17 Haziran 2024</time>
+                  </div>
+                </figure>
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Kan Bağışı Hayat Kurtarır</a>
+                  </h3>
+                  <p class="card-text">
+                    Korona virüs nedeni ile azalan kan stokları için AK Kadınlar olarak 17 Haziran 2024 Saat:1600 Kızılay Kan Merkezlerine kan bağışında bulunuyoruz.
+                  </p>
+                  <a href="#" class="card-link">Daha fazla</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="blog-card">
+                <figure class="card-banner img-holder" style="--width: 1180; --height: 800;">
+                  <img src="./assets/images/blog-2.jpg" width="1180" height="800" loading="lazy"
+                    alt="Dras accumsan nulla nec lacus ultricies placerat." class="img-cover">
+                  <div class="card-badge">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                    <time class="time" datetime="2022-03-24">6 Mayıs 2024</time>
+                  </div>
+                </figure>
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Kan Haftası</a>
+                  </h3>
+                  <p class="card-text">
+                    6-12 Mayıs Kan Haftası
+                  </p>
+                  <a href="#" class="card-link">Daha Fazla</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="blog-card">
+                <figure class="card-banner img-holder" style="--width: 1180; --height: 800;">
+                  <img src="./assets/images/blog-3.jpg" width="1180" height="800" loading="lazy"
+                    alt="Seas accumsan nulla nec lacus ultricies placerat." class="img-cover">
+                  <div class="card-badge">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                    <time class="time" datetime="2022-03-24">24 Mart 2024</time>
+                  </div>
+                </figure>
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Kızılay Kan Bağış Haftası</a>
+                  </h3>
+                  <p class="card-text">
+                  Yıllık Kan Bağışı Haftası
+                  </p>
+                  <a href="#" class="card-link">Daha fazla oku</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </article>
+  </main>
+
+
+  <!--FOOTER-->
+  <footer class="footer">
+  
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          &copy; 2024 Tüm Haklar Kan Bağışı sitesi tarafından sağlanır.
+        </p>
+        <ul class="social-list">
+          <li>
+            <a href="" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--BACK TO TOP-->
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="caret-up" aria-hidden="true"></ion-icon>
+  </a>
+
+  <!--custom js link-->
+  <script src="./assets/js/script.js" defer></script>
+  <!--ionicon link-->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
